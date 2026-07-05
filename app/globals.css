@@ -3,24 +3,272 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --trend-success: #047857;
+  --trend-success-hover: #059669;
+  --trend-success-soft: #ecfdf5;
+  --trend-success-border: #bbf7d0;
+  --trend-success-text: #14532d;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --trend-danger: #dc2626;
+  --trend-danger-hover: #ef4444;
+  --trend-danger-soft: #fef2f2;
+  --trend-danger-text: #dc2626;
+
+  --trend-info: #2563eb;
+  --trend-info-hover: #3b82f6;
+
+  --trend-warning: #ea580c;
+  --trend-warning-hover: #f97316;
+  --trend-warning-soft: #ffedd5;
+  --trend-warning-text: #c2410c;
+
+  --trend-border: #d1d5db;
+  --trend-muted-border: #e2e8f0;
+  --trend-text: #0f172a;
+  --trend-muted: #64748b;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   TrendTour 共通ボタン
+======================================== */
+
+.btn-success {
+  border-radius: 0.75rem;
+  background-color: var(--trend-success);
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: var(--trend-success-hover);
+}
+
+.btn-danger {
+  border-radius: 0.75rem;
+  background-color: var(--trend-danger);
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: var(--trend-danger-hover);
+}
+
+.btn-secondary {
+  border-radius: 0.75rem;
+  border: 1px solid #94a3b8;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.btn-info {
+  border-radius: 0.75rem;
+  background-color: var(--trend-info);
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background-color: var(--trend-info-hover);
+}
+
+.btn-warning {
+  border-radius: 0.75rem;
+  background-color: var(--trend-warning);
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-warning:hover {
+  background-color: var(--trend-warning-hover);
+}
+
+/* 小さめボタン */
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* ========================================
+   TrendTour トグルボタン
+======================================== */
+
+.btn-toggle {
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-toggle:hover {
+  background-color: #f8fafc;
+}
+
+.btn-toggle-active {
+  border-radius: 0.75rem;
+  border: 1px solid var(--trend-success);
+  background-color: var(--trend-success);
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* ========================================
+   TrendTour カード
+======================================== */
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--trend-border);
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+
+.card-lg {
+  border-radius: 1.25rem;
+  border: 1px solid var(--trend-border);
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+
+/* ========================================
+   TrendTour 入力欄
+======================================== */
+
+.input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #94a3b8;
+  padding: 0.65rem 0.9rem;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--trend-success);
+  box-shadow: 0 0 0 3px rgb(4 120 87 / 0.15);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 6rem;
+  border-radius: 0.75rem;
+  border: 1px solid #94a3b8;
+  padding: 0.65rem 0.9rem;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: var(--trend-success);
+  box-shadow: 0 0 0 3px rgb(4 120 87 / 0.15);
+}
+
+/* ========================================
+   TrendTour テーブル
+======================================== */
+
+.table-wrapper {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--trend-border);
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+
+.table-base {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-head {
+  background-color: var(--trend-success-soft);
+}
+
+.table-head th {
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--trend-success-text);
+  border-bottom: 2px solid var(--trend-success-border);
+}
+
+.table-base td {
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--trend-muted-border);
+}
+
+.table-base tbody tr:hover {
+  background-color: #f0fdf4;
+}
+
+.table-base tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   TrendTour バッジ
+======================================== */
+
+.badge-normal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.badge-event {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--trend-warning-soft);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--trend-warning-text);
 }
