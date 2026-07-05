@@ -2,6 +2,7 @@
 
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -22,9 +23,14 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-2xl text-white">
-              🌾
-            </div>
+            <Image
+              src="/icons/icon-512.png"
+              alt="TrendTour"
+              width={56}
+              height={56}
+              className="rounded-2xl"
+              priority
+            />
 
             <div>
               <h1 className="text-2xl font-bold text-slate-900">TrendTour</h1>
