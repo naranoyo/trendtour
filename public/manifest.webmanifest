@@ -1,0 +1,17 @@
+{
+  "name": "TrendTour",
+  "short_name": "TrendTour",
+  "description": "観光データ分析・イベント効果予測アプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
